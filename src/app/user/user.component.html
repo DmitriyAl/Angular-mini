@@ -1,8 +1,8 @@
 <div class="col s6 m3">
-  <div class="card">
+  <div class="card" appHover>
     <div class="card-image">
       <img src="{{user.image}}">
-      <span class="card-title">{{user.name}}</span>
+      <span class="card-title" [ngClass]="{'marked': isMarked}">{{user.name | uppercase}}</span>
     </div>
     <div class="card-content">
       <p>
@@ -10,7 +10,7 @@
       </p>
     </div>
     <div class="card-action">
-      <a href="#">This is a link</a>
+      <a (click)="onClick()" class="waves-effect waves-light btn">Select</a>
     </div>
   </div>
 </div>
